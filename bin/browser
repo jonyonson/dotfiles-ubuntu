@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# opens a file (or webpage) in Firefox (webpage requires 'http://')
+
+if [[ "$OSTSYPE" == "linux-gnu" ]]; then
+  xdg-open "$1"
+elif [[ "$OSTSYPE" == "darwin" ]]; then
+  open -a Google\ Chrome "$1"
+else
+  exit 1
+fi
